@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/toplayout"
+        android:layout_width="wrap_content"
+        android:layout_height="220sp"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:gravity="right|end"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/button"
+                    style="@android:style/Widget.Holo.ImageButton"
+                    android:layout_width="85sp"
+                    android:layout_height="45sp"
+                    android:fadingEdge="none"
+                    android:onClick="increaseTherm"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/arrow_up_float"
+                    android:textSize="24sp"
+                    android:tint="#00BBB316"
+                    tools:text="+" />
+
+                <TextView
+                    android:id="@+id/maininput"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp" />
+
+                <ImageButton
+                    android:id="@+id/button1"
+                    style="@android:style/Widget.Holo.ImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:onClick="decreaseTherm"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/arrow_down_float"
+                    android:textSize="24sp"
+                    tools:text="-" />
+
+                <ImageButton
+                    android:id="@+id/settings"
+                    style="@android:style/Widget.Holo.ImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:onClick="settingsAct"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/ic_menu_manage" />
+
+                <ImageButton
+                    android:id="@+id/refresh"
+                    style="@android:style/Widget.Holo.ImageButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="45sp"
+                    android:drawableStart="@android:drawable/stat_notify_sync"
+                    android:onClick="refresh"
+                    android:scaleType="fitCenter"
+                    android:src="@android:drawable/stat_notify_sync_noanim"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+                <Switch
+                    android:id="@+id/Log_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="log_switch"
+                    android:text="Log" />
+
+                <Switch
+                    android:id="@+id/alert_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:onClick="alert_switch"
+                    android:text="Alert" />
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/topleftlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="3dp"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/house"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/boilertop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/boilerup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/boilerbot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/mainpipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/chimney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/heater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/solarpanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/housepump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/heaterrelay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/boilerpump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/solarpump"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topleftlayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/output"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/botbut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+</RelativeLayout>
