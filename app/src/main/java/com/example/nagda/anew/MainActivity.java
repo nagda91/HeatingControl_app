@@ -32,10 +32,10 @@ import java.util.Vector;
 import static com.example.nagda.anew.App.CHANNEL_1_ID;
 
 public class MainActivity extends AppCompatActivity {
-    static String USERNAME = "app";
-    static String PASSW = "1992";
-    static String URIONE = "tcp://192.168.0.105:1883";
-    static  String URITWO = "tcp://drotikapa.dns.net:1883";
+    static String USERNAME = "USR";
+    static String PASSW = "PSW";
+    static String URIONE = "tcp://YOURBROKER.IP:1883";
+    static  String URITWO = "tcp://your.ddns:1883";
     static String[] URIS = {URIONE, URITWO};
     String clientId = MqttClient.generateClientId();
     double thermDay = 21000;
@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
     //double mainpipe, boiler1, boiler2, heater, house, chimney, solar, solarboiler;
     MqttAndroidClient client;
     String topic = "topic";
-    //String serverURL = "mqtt://rotikapa.ddns.net:2552";
     int qos = 0;
 
     boolean getLog = true;
