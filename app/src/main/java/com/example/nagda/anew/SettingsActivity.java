@@ -51,7 +51,7 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
         //////MQTT////////////////////////////////////////////////////////////////
         String clientId = MqttClient.generateClientId();
-        client = new MqttAndroidClient(this.getApplicationContext(), "tcp://192.168.0.105:1883", clientId);
+        client = new MqttAndroidClient(this.getApplicationContext(), "tcp://YOURBROKER.IP:1883", clientId);
 
         MqttConnectOptions options = new MqttConnectOptions();
         options.setMqttVersion(MqttConnectOptions.MQTT_VERSION_3_1);
